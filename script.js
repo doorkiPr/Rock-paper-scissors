@@ -12,35 +12,35 @@ function getComputerChoice() {
 
 }
 
-function playRound(playerSelection, computerSelection,win) {
-
+function playRound(playerSelection, computerSelection) {
+    let isRoundWon = false;
     let playerChoice = playerSelection.toLowerCase();
     let computerChoice = computerSelection();
 
     if (playerChoice === "rock" && computerChoice === "paper") {
-        win = false;
-        return "You Loose paper  beats rock !"
+        // return "You Loose paper  beats rock !"
     }
     else if (playerChoice === "rock" && computerChoice === "scissors") {
-        return "You Win rock beats scissors ! "
+        // return "You Win rock beats scissors ! "
+        return !isRoundWon
     }
 
     else if (playerChoice === "paper" && computerChoice === "scissors") {
-        win = false;
-        return "You Loose scissors beats paper !"
+        // return "You Loose scissors beats paper !"
     }
 
     else if (playerChoice === "paper" && computerChoice === "rock") {
-        return "You Win paper beats rock ! "
+        // return "You Win paper beats rock ! "
+        return !isRoundWon
     }
 
     else if (playerChoice === "scissors" && computerChoice === "rock") {
-        win = false;
-        return "You Loose rock beats scissors! "
+        // return "You Loose rock beats scissors! "
     }
 
     else if (playerChoice === "scissors" && computerChoice === "paper") {
-        return "You Win scissors beats paper !"
+        // return "You Win scissors beats paper !"
+        return !isRoundWon
     }
 
     else if (playerChoice === computerChoice) {
@@ -70,3 +70,7 @@ function game(computerSelection){
 // compare the choices to declare a winner 
 // if it finds a tie replay the round 
 // if u missinput it replays the round
+
+
+// add a score , and roundState true means winning and false means loosing
+// add a message variable , that changes depending on the outcome of the round
