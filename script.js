@@ -12,12 +12,13 @@ function getComputerChoice() {
 
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection,win) {
 
     let playerChoice = playerSelection.toLowerCase();
     let computerChoice = computerSelection();
 
     if (playerChoice === "rock" && computerChoice === "paper") {
+        win = false;
         return "You Loose paper  beats rock !"
     }
     else if (playerChoice === "rock" && computerChoice === "scissors") {
@@ -25,6 +26,7 @@ function playRound(playerSelection, computerSelection) {
     }
 
     else if (playerChoice === "paper" && computerChoice === "scissors") {
+        win = false;
         return "You Loose scissors beats paper !"
     }
 
@@ -33,6 +35,7 @@ function playRound(playerSelection, computerSelection) {
     }
 
     else if (playerChoice === "scissors" && computerChoice === "rock") {
+        win = false;
         return "You Loose rock beats scissors! "
     }
 
@@ -43,18 +46,23 @@ function playRound(playerSelection, computerSelection) {
     else if (playerChoice === computerChoice) {
         let newPlayerChoice = prompt("It's a tie ! pick a new answer");  
 
-        return playRound(newPlayerChoice, getComputerChoice)
+         playRound(newPlayerChoice, getComputerChoice)
 
     }
     else if (playerChoice != "rock" || playerChoice != "scissors" || playerChoice != "paper") {
 
         let newPlayerChoice = prompt("only rock scissors and paper allowed ! pick a new answer");
 
-        return playRound(newPlayerChoice, getComputerChoice)
+         playRound(newPlayerChoice, getComputerChoice)
     }
 
 }
 
+function game(playerSelection,computerSelection){
+    for (let i = 0; i < 5; i++) {
+        playRound(playerSelection,computerSelection)
+      }
+}
 
 
 
