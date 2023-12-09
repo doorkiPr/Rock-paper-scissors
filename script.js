@@ -61,12 +61,17 @@ function playRound(playerSelection, computerSelection) {
 function game(computerSelection) {
     let playerScore = 0;
     let computerScore = 0;
+
     for (let i = 0; i < 5; i++) {
         playRound(prompt("pick !"), computerSelection) ? playerScore++ : computerScore++;
-
+        console.log(`Player : ${playerScore}  Computer : ${computerScore}`);
     }
+
+    playerScore > computerScore ? console.log("YOU WIN!!") : console.log("YOU LOSE!")
 }
 
+
+game(getComputerChoice)
 // take player and computer choices 
 // compare the choices to declare a winner 
 // if it finds a tie replay the round 
