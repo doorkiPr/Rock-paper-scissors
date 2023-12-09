@@ -58,9 +58,9 @@ function playRound(playerSelection, computerSelection,win) {
 
 }
 
-function game(playerSelection,computerSelection){
+function game(computerSelection){
     for (let i = 0; i < 5; i++) {
-        playRound(playerSelection,computerSelection)
+        playRound(prompt("pick !"),computerSelection)
       }
 }
 
