@@ -44,27 +44,28 @@ function playRound(playerSelection, computerSelection) {
     }
 
     else if (playerChoice === computerChoice) {
-        let newPlayerChoice = prompt("It's a tie ! pick a new answer");  
+        let newPlayerChoice = prompt("It's a tie ! pick a new answer");
 
-         playRound(newPlayerChoice, getComputerChoice)
+        playRound(newPlayerChoice, getComputerChoice)
 
     }
     else if (playerChoice != "rock" || playerChoice != "scissors" || playerChoice != "paper") {
 
         let newPlayerChoice = prompt("only rock scissors and paper allowed ! pick a new answer");
 
-         playRound(newPlayerChoice, getComputerChoice)
+        playRound(newPlayerChoice, getComputerChoice)
     }
 
 }
 
-function game(computerSelection){
+function game(computerSelection) {
+    let playerScore = 0;
+    let computerScore = 0;
     for (let i = 0; i < 5; i++) {
-        playRound(prompt("pick !"),computerSelection)
-      }
+        playRound(prompt("pick !"), computerSelection) ? playerScore++ : computerScore++;
+
+    }
 }
-
-
 
 // take player and computer choices 
 // compare the choices to declare a winner 
