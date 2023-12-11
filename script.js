@@ -73,14 +73,16 @@ const buttonWrapper = document.querySelector("#buttonWrapper");
 const buttonArray = Array.from(buttonWrapper.children);
 
 
+buttonArray.forEach(button =>{
+    let answer;
+    button.addEventListener('click',() =>{
+        answer = button.textContent;
+    })
+
+})
 
 
 
-// take player and computer choices 
-// compare the choices to declare a winner 
-// if it finds a tie replay the round 
-// if u missinput it replays the round
-
-
-// add a score , and roundState true means winning and false means loosing
-// add a message variable , that changes depending on the outcome of the round
+// get value string from any of the three buttons clicked :
+// set event listener on each button
+// when triggered store value in  variable;
