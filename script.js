@@ -1,3 +1,5 @@
+let playerScore = 0;
+let computerScore = 0;
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -59,9 +61,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game(computerSelection) {
-    let playerScore = 0;
-    let computerScore = 0;
-
         playRound(prompt("pick !"), computerSelection) ? playerScore++ : computerScore++;
         console.log(`Player : ${playerScore}  Computer : ${computerScore}`);
 
