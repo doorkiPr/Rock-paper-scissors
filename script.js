@@ -15,36 +15,35 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    let isRoundWon = false;
     let computerChoice = computerSelection();
 
     if (playerSelection === "rock" && computerChoice === "paper") {
-        // return "You Loose paper  beats rock !"
-        return isRoundWon
+        computerScore++
+        // return "You Loose paper  beats rock !";
     }
     else if (playerSelection === "rock" && computerChoice === "scissors") {
+        playerScore++
         // return "You Win rock beats scissors ! "
-        return !isRoundWon
     }
 
     else if (playerSelection === "paper" && computerChoice === "scissors") {
+        computerScore++
         // return "You Loose scissors beats paper !"
-        return isRoundWon
     }
 
     else if (playerSelection === "paper" && computerChoice === "rock") {
+        playerScore++
         // return "You Win paper beats rock ! "
-        return !isRoundWon
     }
 
     else if (playerSelection === "scissors" && computerChoice === "rock") {
+        computerScore++
         // return "You Loose rock beats scissors! "
-        return isRoundWon
     }
 
     else if (playerSelection === "scissors" && computerChoice === "paper") {
+        playerScore++
         // return "You Win scissors beats paper !"
-        return !isRoundWon
     }
 
     else if (playerSelection === computerChoice) {
@@ -65,8 +64,7 @@ const buttonArray = Array.from(buttonWrapper.children);
 buttonArray.forEach(button =>{
     let answer;
     button.addEventListener('click',() =>{
-        answer = button.textContent.toLowerCase();
-        
+        answer = button.textContent.toLowerCase();        
     })
 
 })
