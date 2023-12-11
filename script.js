@@ -69,6 +69,13 @@ function game(computerSelection) {
 }
 
 
+const buttonWrapper = document.querySelector("#buttonWrapper");
+const buttonArray = Array.from(buttonWrapper.children);
+
+
+
+
+
 // take player and computer choices 
 // compare the choices to declare a winner 
 // if it finds a tie replay the round 
