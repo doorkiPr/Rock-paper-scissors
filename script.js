@@ -71,7 +71,9 @@ buttonArray.forEach(button =>{
     let answer;
     button.addEventListener('click',() =>{
         answer = button.textContent.toLowerCase();
-        playRound(answer,getComputerChoice);        
+        playRound(answer,getComputerChoice);
+        playerScoreDiv.textContent = playerScore;
+        computerScoreDiv.textContent = computerScore;        
     })
 
 })
