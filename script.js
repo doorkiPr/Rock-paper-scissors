@@ -1,5 +1,7 @@
 const playerScoreDiv = document.querySelector("#playerScore");
 const computerScoreDiv = document.querySelector("#computerScore");
+const computerChoiceDiv = document.querySelector("#computerChoice");
+const roundResultDiv = document.querySelector("#roundResult");
 
 let playerScore = 0;
 let computerScore = 0;
