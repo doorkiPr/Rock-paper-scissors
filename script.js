@@ -61,22 +61,29 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-
-
-
-
 function playGame(e){
     let answer;
     answer = e.currentTarget.textContent.toLowerCase();
     playRound(answer,getComputerChoice);
     playerScoreDiv.textContent = playerScore;
     computerScoreDiv.textContent = computerScore;  
+    endGame();
+}
+
+function endGame(){
+    if(playerScore === 5  || computerScore ===5 ){
+        playerScore = 0;
+        computerScore = 0;
+        computerScoreDiv.textContent=0
+        playerScoreDiv.textContent=0
+
+        playerScore > computerScore ? roundResultDiv.textContent="PLAYER WINS :)) !!! " : roundResultDiv.textContent="PLAYER LOOSE :( !!! " ;
+    }
 }
 
 buttonArray.forEach(button =>{
     button.addEventListener('click',playGame)
 })
-
 
 
 // get value string from any of the three buttons clicked :
