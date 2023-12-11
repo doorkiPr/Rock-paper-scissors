@@ -2,6 +2,9 @@ const playerScoreDiv = document.querySelector("#playerScore");
 const computerScoreDiv = document.querySelector("#computerScore");
 const computerChoiceDiv = document.querySelector("#computerChoice");
 const roundResultDiv = document.querySelector("#roundResult");
+const buttonWrapper = document.querySelector("#buttonWrapper");
+const buttonArray = Array.from(buttonWrapper.children);
+
 
 let playerScore = 0;
 let computerScore = 0;
@@ -60,8 +63,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-const buttonWrapper = document.querySelector("#buttonWrapper");
-const buttonArray = Array.from(buttonWrapper.children);
+
 
 function playGame(e){
     let answer;
@@ -73,7 +75,6 @@ function playGame(e){
 
 buttonArray.forEach(button =>{
     button.addEventListener('click',playGame)
-
 })
 
 
