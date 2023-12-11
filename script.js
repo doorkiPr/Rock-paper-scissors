@@ -16,46 +16,48 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     let isRoundWon = false;
-    let playerChoice = playerSelection.toLowerCase();
     let computerChoice = computerSelection();
 
-    if (playerChoice === "rock" && computerChoice === "paper") {
+    if (playerSelection === "rock" && computerChoice === "paper") {
         // return "You Loose paper  beats rock !"
+        return isRoundWon
     }
-    else if (playerChoice === "rock" && computerChoice === "scissors") {
+    else if (playerSelection === "rock" && computerChoice === "scissors") {
         // return "You Win rock beats scissors ! "
         return !isRoundWon
     }
 
-    else if (playerChoice === "paper" && computerChoice === "scissors") {
+    else if (playerSelection === "paper" && computerChoice === "scissors") {
         // return "You Loose scissors beats paper !"
+        return isRoundWon
     }
 
-    else if (playerChoice === "paper" && computerChoice === "rock") {
+    else if (playerSelection === "paper" && computerChoice === "rock") {
         // return "You Win paper beats rock ! "
         return !isRoundWon
     }
 
-    else if (playerChoice === "scissors" && computerChoice === "rock") {
+    else if (playerSelection === "scissors" && computerChoice === "rock") {
         // return "You Loose rock beats scissors! "
+        return isRoundWon
     }
 
-    else if (playerChoice === "scissors" && computerChoice === "paper") {
+    else if (playerSelection === "scissors" && computerChoice === "paper") {
         // return "You Win scissors beats paper !"
         return !isRoundWon
     }
 
-    else if (playerChoice === computerChoice) {
-        let newPlayerChoice = prompt("It's a tie ! pick a new answer");
+    else if (playerSelection === computerChoice) {
+        // let newPlayerChoice = prompt("It's a tie ! pick a new answer");
 
-        playRound(newPlayerChoice, getComputerChoice)
+        // playRound(newPlayerChoice, getComputerChoice)
 
     }
-    else if (playerChoice != "rock" || playerChoice != "scissors" || playerChoice != "paper") {
+    else if (playerSelection != "rock" || playerSelection != "scissors" || playerSelection != "paper") {
 
-        let newPlayerChoice = prompt("only rock scissors and paper allowed ! pick a new answer");
+        // let newPlayerChoice = prompt("only rock scissors and paper allowed ! pick a new answer");
 
-        playRound(newPlayerChoice, getComputerChoice)
+        // playRound(newPlayerChoice, getComputerChoice)
     }
 
 }
@@ -69,7 +71,8 @@ const buttonArray = Array.from(buttonWrapper.children);
 buttonArray.forEach(button =>{
     let answer;
     button.addEventListener('click',() =>{
-        answer = button.textContent;
+        answer = button.textContent.toLowerCase();
+        
     })
 
 })
