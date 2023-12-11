@@ -25,38 +25,35 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === "rock" && computerChoice === "paper") {
         computerScore++;
-        // return "You Loose paper  beats rock !";
+        roundResultDiv.textContent="You Loose paper  beats rock !";
     }
     else if (playerSelection === "rock" && computerChoice === "scissors") {
         playerScore++;
-        // return "You Win rock beats scissors ! "
+        roundResultDiv.textContent="You Win rock beats scissors ! "
     }
 
     else if (playerSelection === "paper" && computerChoice === "scissors") {
         computerScore++;
-        // return "You Loose scissors beats paper !"
+        roundResultDiv.textContent="You Loose scissors beats paper !"
     }
 
     else if (playerSelection === "paper" && computerChoice === "rock") {
         playerScore++;
-        // return "You Win paper beats rock ! "
+        roundResultDiv.textContent="You Win paper beats rock ! "
     }
 
     else if (playerSelection === "scissors" && computerChoice === "rock") {
         computerScore++;
-        // return "You Loose rock beats scissors! "
+        roundResultDiv.textContent="You Loose rock beats scissors! "
     }
 
     else if (playerSelection === "scissors" && computerChoice === "paper") {
         playerScore++;
-        // return "You Win scissors beats paper !"
+        roundResultDiv.textContent="You Win scissors beats paper !"
     }
 
     else if (playerSelection === computerChoice) {
-        // let newPlayerChoice = prompt("It's a tie ! pick a new answer");
-
-        // playRound(newPlayerChoice, getComputerChoice)
-
+        roundResultDiv.textContent="It's a tie ! Please replay this Round!";
     }
 
 }
