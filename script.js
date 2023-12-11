@@ -21,33 +21,34 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     let computerChoice = computerSelection();
+    computerChoiceDiv.textContent = "the computer played : " + computerChoice;
 
     if (playerSelection === "rock" && computerChoice === "paper") {
-        computerScore++
+        computerScore++;
         // return "You Loose paper  beats rock !";
     }
     else if (playerSelection === "rock" && computerChoice === "scissors") {
-        playerScore++
+        playerScore++;
         // return "You Win rock beats scissors ! "
     }
 
     else if (playerSelection === "paper" && computerChoice === "scissors") {
-        computerScore++
+        computerScore++;
         // return "You Loose scissors beats paper !"
     }
 
     else if (playerSelection === "paper" && computerChoice === "rock") {
-        playerScore++
+        playerScore++;
         // return "You Win paper beats rock ! "
     }
 
     else if (playerSelection === "scissors" && computerChoice === "rock") {
-        computerScore++
+        computerScore++;
         // return "You Loose rock beats scissors! "
     }
 
     else if (playerSelection === "scissors" && computerChoice === "paper") {
-        playerScore++
+        playerScore++;
         // return "You Win scissors beats paper !"
     }
 
