@@ -64,7 +64,8 @@ const buttonArray = Array.from(buttonWrapper.children);
 buttonArray.forEach(button =>{
     let answer;
     button.addEventListener('click',() =>{
-        answer = button.textContent.toLowerCase();        
+        answer = button.textContent.toLowerCase();
+        playRound(answer,getComputerChoice)        
     })
 
 })
