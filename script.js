@@ -53,12 +53,6 @@ function playRound(playerSelection, computerSelection) {
         // playRound(newPlayerChoice, getComputerChoice)
 
     }
-    else if (playerSelection != "rock" || playerSelection != "scissors" || playerSelection != "paper") {
-
-        // let newPlayerChoice = prompt("only rock scissors and paper allowed ! pick a new answer");
-
-        // playRound(newPlayerChoice, getComputerChoice)
-    }
 
 }
 
