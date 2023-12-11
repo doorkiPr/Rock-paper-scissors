@@ -63,15 +63,16 @@ function playRound(playerSelection, computerSelection) {
 const buttonWrapper = document.querySelector("#buttonWrapper");
 const buttonArray = Array.from(buttonWrapper.children);
 
+function playGame(e){
+    let answer;
+    answer = e.currentTarget.textContent.toLowerCase();
+    playRound(answer,getComputerChoice);
+    playerScoreDiv.textContent = playerScore;
+    computerScoreDiv.textContent = computerScore;  
+}
 
 buttonArray.forEach(button =>{
-    let answer;
-    button.addEventListener('click',() =>{
-        answer = button.textContent.toLowerCase();
-        playRound(answer,getComputerChoice);
-        playerScoreDiv.textContent = playerScore;
-        computerScoreDiv.textContent = computerScore;        
-    })
+    button.addEventListener('click',playGame)
 
 })
 
