@@ -60,12 +60,6 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function game(computerSelection) {
-        playRound(prompt("pick !"), computerSelection) ? playerScore++ : computerScore++;
-        console.log(`Player : ${playerScore}  Computer : ${computerScore}`);
-
-    playerScore > computerScore ? console.log("YOU WIN!!") : console.log("YOU LOSE!")
-}
 
 
 const buttonWrapper = document.querySelector("#buttonWrapper");
