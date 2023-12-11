@@ -1,3 +1,6 @@
+const playerScoreDiv = document.querySelector("#playerScore");
+const computerScoreDiv = document.querySelector("#computerScore");
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -65,7 +68,7 @@ buttonArray.forEach(button =>{
     let answer;
     button.addEventListener('click',() =>{
         answer = button.textContent.toLowerCase();
-        playRound(answer,getComputerChoice)        
+        playRound(answer,getComputerChoice);        
     })
 
 })
